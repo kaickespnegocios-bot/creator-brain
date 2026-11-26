@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creator Brain · Términos y privacidad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+  /* Layout: one readable column, two documents with anchors (#terminos, #privacidad) */
+  :root {
+    --bg: #f6f7fa; --panel: #ffffff; --fg: #161a22; --muted: #5a6273; --line: #dde1ea; --accent: #4a34d6;
+    --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --body: "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0e1016; --panel: #161a22; --fg: #e8eaf0; --muted: #9aa2b3; --line: #2a303c; --accent: #b9f24a; color-scheme: dark } }
+  :root[data-theme="dark"] { --bg: #0e1016; --panel: #161a22; --fg: #e8eaf0; --muted: #9aa2b3; --line: #2a303c; --accent: #b9f24a; color-scheme: dark }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.65 var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+  main { max-width: 44rem; margin: 0 auto; display: grid; gap: 40px; }
+  header { display: grid; gap: 8px; }
+  .brand { font: 700 1.1rem var(--display); letter-spacing: 0.01em; }
+  .brand span { color: var(--accent); }
+  h1 { font: 700 2rem/1.2 var(--display); margin: 0; text-wrap: balance; }
+  .lede { color: var(--muted); margin: 0; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  nav a { color: var(--fg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; text-decoration: none; font-size: 0.9rem; }
+  nav a:hover, nav a:focus-visible { border-color: var(--accent); outline: none; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 28px clamp(18px, 4vw, 36px); scroll-margin-top: 16px; }
+  h2 { font: 700 1.5rem/1.25 var(--display); margin: 0 0 4px; }
+  .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 20px; }
+  h3 { font: 600 1.05rem var(--display); margin: 24px 0 6px; }
+  p, ul { margin: 0 0 10px; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 4px; }
+  code { font-size: 0.9em; background: color-mix(in srgb, var(--line) 60%, transparent); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="brand">CREATOR<span> BRAIN</span></p>
+    <h1>Términos de servicio y política de privacidad</h1>
+    <p class="lede">Creator Brain es una herramienta personal de estrategia de contenido que funciona en el ordenador de su creador (KaickESP). No es un servicio público ni tiene usuarios externos.</p>
+    <nav aria-label="Documentos">
+      <a href="#terminos">Términos de servicio</a>
+      <a href="#privacidad">Política de privacidad</a>
+    </nav>
+  </header>
+
+  <section id="terminos" aria-labelledby="t-title">
+    <h2 id="t-title">Términos de servicio</h2>
+    <p class="meta">Última actualización: 26 de noviembre de 2026</p>
+
+    <h3>Qué es</h3>
+    <p>Creator Brain es una aplicación de uso privado que se ejecuta en local (<code>127.0.0.1</code>) en el equipo de su único usuario, el creador de contenido KaickESP. Sirve para consultar las estadísticas de sus propias cuentas de YouTube, Twitch, TikTok e Instagram y para planificar vídeos.</p>
+
+    <h3>Quién puede usarla</h3>
+    <p>Solo el propietario de las cuentas conectadas. La aplicación no está disponible para terceros, no tiene registro de usuarios y no se distribuye.</p>
+
+    <h3>Uso de las plataformas</h3>
+    <ul>
+      <li>La aplicación accede únicamente a las cuentas que su propietario conecta de forma explícita, mediante las APIs oficiales de cada plataforma.</li>
+      <li>Todos los permisos son de solo lectura: la aplicación no publica, no comenta, no responde y no modifica nada en ninguna cuenta.</li>
+      <li>El uso respeta los términos para desarrolladores de cada plataforma (TikTok for Developers, Twitch Developer Agreement, Meta Platform Terms y YouTube API Services Terms).</li>
+    </ul>
+
+    <h3>Sin garantías</h3>
+    <p>La aplicación se ofrece tal cual, para uso personal. Las estadísticas proceden de las APIs de cada plataforma y pueden tener retrasos o lagunas.</p>
+
+    <h3>Retirar el acceso</h3>
+    <p>El propietario puede desconectar cualquier cuenta en cualquier momento desde los ajustes de la aplicación o desde la configuración de aplicaciones conectadas de cada plataforma.</p>
+  </section>
+
+  <section id="privacidad" aria-labelledby="p-title">
+    <h2 id="p-title">Política de privacidad</h2>
+    <p class="meta">Última actualización: 26 de noviembre de 2026</p>
+
+    <h3>Datos que se leen</h3>
+    <ul>
+      <li><strong>TikTok</strong>: nombre de usuario, número de seguidores, seguidos y me gusta, y la lista de vídeos propios con sus vistas, me gusta, comentarios y compartidos (scopes <code>user.info.basic</code>, <code>user.info.profile</code>, <code>user.info.stats</code> y <code>video.list</code>).</li>
+      <li><strong>YouTube, Twitch e Instagram</strong>: estadísticas de la cuenta y de sus publicaciones, y comentarios públicos recibidos en ellas.</li>
+      <li><strong>Chat de Twitch</strong>: cuántos mensajes envía cada persona al día y sus últimos mensajes en el canal del propietario, para saber quién participa más.</li>
+    </ul>
+
+    <h3>Dónde se guardan</h3>
+    <p>Solo en una base de datos local en el ordenador del propietario. Los tokens de acceso se guardan cifrados (AES-256-GCM). No hay servidores propios ni almacenamiento en la nube.</p>
+
+    <h3>Con quién se comparten</h3>
+    <p>Con nadie. Los datos no se venden, no se ceden y no se usan para publicidad. Para generar ideas de vídeo, la aplicación puede enviar resúmenes de tendencias y de rendimiento a la API de Google Gemini. Esos envíos nunca incluyen tokens.</p>
+
+    <h3>Cuánto tiempo</h3>
+    <p>Mientras el propietario use la aplicación. Al desconectar una cuenta se borra su token. Borrar la carpeta <code>data</code> de la aplicación elimina todos los datos.</p>
+
+    <h3>Derechos</h3>
+    <p>Como los datos solo están en el equipo del propietario, puede consultarlos, exportarlos o borrarlos directamente. Quien haya comentado en sus publicaciones puede borrar su comentario en la propia plataforma. Desde ese momento deja de aparecer en la siguiente sincronización.</p>
+
+    <h3>Contacto</h3>
+    <p>Para cualquier consulta, contacta con KaickESP a través de sus redes oficiales.</p>
+  </section>
+</main>
+</body>
+</html>
